@@ -1,0 +1,12 @@
+FROM ttaga/barotrauma-server:latest as campaign
+# copy default serversettings
+COPY config/serversettings.xml /app/serversettings.xml
+# copy default clientpermissions
+COPY config/clientpermissions.xml /app/Data/clientpermissions.xml
+# copy submarines
+ADD Submarines.tar.gz /app/Submarines/
+# copy mods
+ADD Mods.tar.gz /app/Mods/
+# copy config_player to activate all mod
+COPY config/config_player.xml /app/config_player.xml
+# ... may do other stuff to enable mods or whatever
