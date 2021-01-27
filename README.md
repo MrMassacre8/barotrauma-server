@@ -4,19 +4,24 @@ A barotrauma server packed as a linux docker image.
 
 ## Usage
 
-First you have to build the image.
-
-```bash
-docker build --tag barotrauma-server:latest .
-```
+Pull the image from [docker hub](https://hub.docker.com/r/ttaga/barotrauma-server).
 
 ### Via `docker run`
 
-TBA
+To test it also use `-it`, otherwise run it `-d` in the background.
+
+```bash
+docker run -it \
+    -p 27015:27015/udp \
+    -p 27016:27016/udp \
+    ttaga/barotrauma-server
+```
 
 ### Via `docker-compose`
 
-TBA
+```bash
+docker-compose up -d
+```
 
 ## Dependencies
 
