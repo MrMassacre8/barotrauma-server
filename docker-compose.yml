@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+
+  barotrauma:
+    image: barotrauma-server:campaign
+    # ttaga/barotrauma-server
+    ports:
+      - target: 27015
+        published: 27015
+        protocol: udp
+      - target: 27016
+        published: 27016
+        protocol: udp
+    volumes:
+      - type: volume
+        source: save-files
+        target: /app/Daedalic Entertainment GmbH/Barotrauma/Multiplayer/
+
+volumes:
+  save-files:
