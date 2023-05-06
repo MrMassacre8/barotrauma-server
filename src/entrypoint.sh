@@ -6,10 +6,15 @@ echo "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo "Updating barotrauma"
 echo "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#"
 
-steamcmd +login anonymous \
+cp /home/container/Data/clientpermissions.xml /home/container/Data/clientpermissions_backup.xml
+
+steamcmd \
     +force_install_dir /home/container \
+    +login anonymous \
     +app_update 1026340 validate \
     +quit
+
+cp /home/container/Data/clientpermissions_backup.xml /home/container/Data/clientpermissions.xml
 
 echo "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#"
 echo "Starting barotrauma"
