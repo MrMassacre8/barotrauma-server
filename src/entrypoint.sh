@@ -11,7 +11,6 @@ cp /home/container/Data/clientpermissions.xml /home/container/Data/clientpermiss
 steamcmd \
     +force_install_dir /home/container \
     +login anonymous \
-    +app_update 1026340 validate \
     +quit
 
 cp /home/container/Data/clientpermissions_backup.xml /home/container/Data/clientpermissions.xml
